@@ -25,7 +25,8 @@ BUTTON_NONE_PIN = 5 # dunno what is this
 # Objects representing the available hardware on the PixelKit
 neopixel_pin = Pin(NEOPIXEL_PIN, Pin.OUT)
 np = NeoPixel(neopixel_pin, SIZE)
-np.timing = 1 # This will set the neopixel frequency correctly
+# This does not work with more recent MicroPython versions (e.g. v1.21.0)
+# np.timing = 1 # This will set the neopixel frequency correctly
 joystick_up = Pin(JOYSTICK_UP_PIN, Pin.IN)
 joystick_down = Pin(JOYSTICK_DOWN_PIN, Pin.IN)
 joystick_left = Pin(JOYSTICK_LEFT_PIN, Pin.IN)
